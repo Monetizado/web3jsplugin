@@ -34,13 +34,16 @@
 
 ## Use Cases
 
-- [x] Other: 
+- [x] Other: For the creation and monetization of static and/or dynamic content (such as blogs, news, audios, videos, PDFs, and more) by integrating into any web page.
 
 ## Usage (Before & After Plugin)
 
 Before the plugin, Web developers need to import several libraries and make sure they are implementing the most recent version of the Monetizado javascript library, and make sure they are on a valid network to use it. 
+
 Now, all you have to do is implement the plugin and execute the different methods
 
-## Mandatory
+## Video
 
-[Diagram or video explaning the process/flow of the plugin]
+[Here is a demo how Monetizado works](https://www.youtube.com/watch?v=Bz0YMgmsfCo)
+
+With the plugin, it would be the same process, simplifying the development for the frontend.
