@@ -49,6 +49,34 @@ In addition, using the web3.js extension simplifies use for content creators wit
 - **Description:** Verify if the user has access to the monetized content (paid for the content).
 - **Steps:**
   1. Return a boolean if the user (Caller) paid for the content and has access.
+
+#### `changeAccessCost(id, newCost)`
+
+- **Description:** Change the cost of access to specific content. The user/caller must be the creator to be able to change the cost.
+- **Steps:**
+  1. Verify the id for the caller (creator) is registered as protected content in the selected chain.
+  2. Change with a new cost (in wei).
+
+#### `unprotectContent(id)`
+
+- **Description:** Release the content (it is no longer protected for paying users only).
+- **Steps:**
+  1. Verify the id for the caller (creator) is registered as protected content in the selected chain.
+  2. Release the protected content
+
+#### `protectContent(id)`
+
+- **Description:** Re-protect content (paying users only).
+- **Steps:**
+  1. Verify the id for the caller (creator) is registered as protected content in the selected chain.
+  2. Re-protect the content
+
+#### `withdrawMoneyFromContent(Id,amount)`
+
+- **Description:** The content creator can withdraw money from their content
+- **Steps:**
+  1. Verify the id for the caller (creator) is registered as protected content in the selected chain.
+  2. Content creator approve the transaction and receive the amount specified.
  
 ## Category
 
@@ -60,9 +88,9 @@ In addition, using the web3.js extension simplifies use for content creators wit
 
 ## Usage (Before & After Plugin)
 
-Before the plugin, Web developers need to import several libraries and make sure they are implementing the most recent version of the Monetizado javascript library, and make sure they are on a valid network to use it. 
+Before the plugin, Web developers need to import several libraries and make sure they are implementing the most recent version of the Monetizado javascript library, and make sure they are on a valid network to use it. The library creates and uses a new javascript property on _window_, `monetizado`.
 
-Now, all you have to do is implement the plugin and execute the different methods
+Now, all you have to do is implement the plugin and execute the different methods. It is not necessary to use the _window.monetizado_ property.
 
 ## Video
 
