@@ -1,4 +1,4 @@
-# [Plugin Name] Ideathon Proposal
+# Monetizado Plugin - Ideathon Proposal
 
 ## Overview
 
@@ -12,35 +12,29 @@
 
 ### Storage
 
-[What needs to be stored in the plugin to be able to work?]
+1. **ABI for the [Monetizado Contract](https://github.com/Monetizado/Contracts/tree/main/ABI)**: To maintain and store the ABI and [contract](https://github.com/Monetizado/Contracts/blob/main/v1/Monetizadov1.sol) for use in the plugin.
+2. **Monetizado addresses**: [Monetizado addresses](https://github.com/Monetizado/Contracts/tree/main?tab=readme-ov-file#contract-ids) deployed in different EVM networks.
 
 ### Functions
 
-#### `[Function 1]()`
+#### `addProtectedContent(name, accessCost)`
 
-- **Description:** [Brief description of the function and its purpose.]
+- **Description:** Allows the creation of an object that will be monetized
 - **Steps:**
-  1. [Step 1: Describe what the function does.]
-  2. [Step 2: Describe what the function does.]
-  3. [Step 3: Describe what the function does.]
+  1. Select a name and cost (in wei) for the item that should be monetized.
+  2. Gets the wallet ID of the creator (the user who is executing the method).
+  3. Execute the `addProtectedContent(string memory name, uint256 accessCost)` method in the contract.
+  4. Return a sequential ID for the contract (from zero), associated with the creator.
 
 [Add more functions as needed]
 
 ## Category
 
-[Select the appropriate category for the plugin: Community Plugin or Project Plugin for a specific project]
-
-- [] Community Plugin (general usage plugin for everyone, e.g, Multicall plugin, Tokens plugin)
-- [] Project Plugin: (plugin to interact with an specific project, e.g, Chainlink plugin, Superfluid plugin)
-- [] Other (specify)
+- [x] Project Plugin: [Monetizado](https://github.com/Monetizado)
 
 ## Use Cases
 
-[List potential use cases for the plugin.]
-
-- [] Developer Experience (explain)
-- [] Gas optimization (explain)
-- [] Other (explain)
+- [x] Other: 
 
 ## Usage (Before & After Plugin)
 
