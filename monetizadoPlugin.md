@@ -2,11 +2,9 @@
 
 ## Overview
 
-[Provide a brief overview of the plugin and its purpose]
+The Monetizado plugin is an extension of the [Monetizado](https://github.com/Monetizado/Contracts) project, to be able to monetize using web3.js any type of content on web 2.0, such as news, blogs, audios, videos, documents and much more, in a simple way and without depending on more extensions.
 
-- How does the project works?
-- What problem the plugin solves?
-- How does it improve the DevEx or project functionality?
+In addition, using the web3.js extension simplifies use for content creators without having to worry about smart contracts and different networks.
 
 ## Features
 
