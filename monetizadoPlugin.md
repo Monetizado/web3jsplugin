@@ -2,7 +2,7 @@
 
 ## Overview
 
-The Monetizado plugin is an extension of the [Monetizado](https://github.com/Monetizado/Contracts) project, to be able to monetize using web3.js any type of content on web 2.0, such as news, blogs, audios, videos, documents and much more, in a simple way and without depending on more extensions.
+The Monetizado plugin is an extension of the [Monetizado](https://github.com/Monetizado/monetizadojs) project, to be able to monetize using web3.js any type of content on web 2.0, such as news, blogs, audios, videos, documents and much more, in a simple way and without depending on more extensions.
 
 In addition, using the web3.js extension simplifies use for content creators without having to worry about smart contracts and different networks.
 
@@ -24,8 +24,32 @@ In addition, using the web3.js extension simplifies use for content creators wit
   3. Execute the `addProtectedContent(string memory name, uint256 accessCost)` method in the contract.
   4. Return a sequential ID for the contract (from zero), associated with the creator.
 
-[Add more functions as needed]
+#### `getProtectedContentsForCurrentUser()`
 
+- **Description:** List all content protected by the content creator calling this method
+- **Steps:**
+  1. Gets the list of monetized items (including cost, name, and more).
+ 
+#### `getProtectedContentByAddressAndId(creator, Id)`
+
+- **Description:** Returns content protected by a specified content creator and Id
+- **Steps:**
+  1. Gets the monetized item (including cost, name, and more).
+
+#### `payAccess(creator, Id)`
+
+- **Description:** Pay for content protected by a specified content creator and Id
+- **Steps:**
+  1. Verify if the creator and Id exists in the contract (in the chain selected by web3.js).
+  2. Call for the method and pay for the content, including the gas.
+  3. Return a boolean if the payment was successful. 
+
+#### `currentUserHasAccess(creator, Id)`
+
+- **Description:** Verify if the user has access to the monetized content (paid for the content).
+- **Steps:**
+  1. Return a boolean if the user (Caller) paid for the content and has access.
+ 
 ## Category
 
 - [x] Project Plugin: [Monetizado](https://github.com/Monetizado)
